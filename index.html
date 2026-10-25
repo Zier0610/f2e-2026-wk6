@@ -13,7 +13,6 @@
 
   <div class="page">
 
-    <!-- Header (flex) -->
     <header class="header">
       <div class="header-top">
         <h1 class="logo">Vegetables</h1>
@@ -39,13 +38,11 @@
         <a href="#" class="nav-item">Contact</a>
       </nav>
     </header>
-
-    <!-- Hero -->
+    
     <section class="hero">
       <img src="images/img_main_pumpkin.png" alt="Yellow pumpkins and squash">
     </section>
 
-    <!-- Lower area (grid) -->
     <main class="main-grid">
 
       <section class="col">
@@ -87,7 +84,6 @@
   </footer>
 
   <script>
-    // 選單簡單互動:點擊會切換 active 樣式,但不會跳轉
     document.querySelectorAll('.nav-item').forEach(function (item) {
       item.addEventListener('click', function (e) {
         e.preventDefault();
@@ -95,7 +91,6 @@
         item.classList.add('active');
       });
     });
-    // 其他連結(登入、社群等)也不跳轉
     document.querySelectorAll('.icon-link, .btn-outline').forEach(function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); });
     });
