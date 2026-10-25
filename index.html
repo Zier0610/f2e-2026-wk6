@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vegetables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Header (flex) -->
+    <header class="header">
+      <div class="header-top">
+        <h1 class="logo">Vegetables</h1>
+
+        <div class="header-tools">
+          <a href="#" class="icon-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 2h18a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1h-5.2v-7.6h2.6l.4-3h-3V9.5c0-.9.3-1.5 1.5-1.5h1.6V5.3c-.3 0-1.200-.1-2.300-.1-2.300 0-3.900 1.400-3.900 4v2.200H9v3h2.700V22H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/></svg>
+          </a>
+          <a href="#" class="icon-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path fill-rule="evenodd" d="M5 2h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm7 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.500-3.500a1.200 1.200 0 1 0 0 2.400 1.200 1.200 0 0 0 0-2.400z"/></svg>
+          </a>
+          <span class="divider"></span>
+          <a href="#" class="btn-outline">LOGIN</a>
+          <a href="#" class="btn-outline">JOIN</a>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="nav-item active">Home</a>
+        <a href="#" class="nav-item">About Us</a>
+        <a href="#" class="nav-item">Vegetables</a>
+        <a href="#" class="nav-item">Online</a>
+        <a href="#" class="nav-item">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/img_main_pumpkin.png" alt="Yellow pumpkins and squash">
+    </section>
+
+    <!-- Lower area (grid) -->
+    <main class="main-grid">
+
+      <section class="col">
+        <h2 class="bar-title">Vegetables</h2>
+        <div class="veg-grid">
+          <article class="veg-card">
+            <img src="images/img_vegetables_carrot.png" alt="Carrots">
+            <p>Crisp, sweet, and naturally vibrant, carrots are a versatile root vegetable rich in beta-carotene and essential vitamins. Perfect for snacking raw, roasting, or adding to soups and salads for a natural crunch.</p>
+          </article>
+          <article class="veg-card">
+            <img src="images/img_vegetables_corn.png" alt="Sweet corn">
+            <p>Plump and full of natural sweetness, sweet corn is a wholesome favorite packed with dietary fiber and essential nutrients. Enjoy it freshly boiled, grilled on the cob, or mixed into delicious side dishes.</p>
+          </article>
+          <article class="veg-card">
+            <img src="images/img_vegetables_pepper.png" alt="Yellow bell peppers">
+            <p>Packed with vitamin C and antioxidants, green bell peppers offer a refreshingly mild, slightly tangy flavor and a satisfying crunch. An ideal ingredient for stir-fries, fajitas, or fresh garden salads.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="col">
+        <h2 class="bar-title">Contact</h2>
+        <div class="contact-box">
+          <p class="contact-text">"For any questions or suggestions about Vegetables, Vegetables Club, or your online order, you can contact Vegetables Customer Service by phone, email, or post, and we'll be happy to help.<br>
+          Our dedicated customer support team is committed to providing you with the best possible service. Whether you need assistance with tracking a delivery, updating your Vegetables Club subscription preferences, inquiring about product availability, or managing returns and refunds, we are here to ensure your experience is smooth and hassle-free.<br>
+          Please feel free to reach out during our regular business hours (Monday to Friday, 9:00 AM – 6:00 PM EST). For quick inquiries regarding delivery schedules, payment options, or membership benefits, you can also check our FAQ section before contacting us."</p>
+          <div class="contact-info">
+            <p>E-mail : Vegetables@aaabbccc.com</p>
+            <p>PHONE : +886-123-456-789</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>Copyrights 2017 Vegetables cise / Design by Vegetables</p>
+  </footer>
+
+  <script>
+    // 選單簡單互動:點擊會切換 active 樣式,但不會跳轉
+    document.querySelectorAll('.nav-item').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(function (i) { i.classList.remove('active'); });
+        item.classList.add('active');
+      });
+    });
+    // 其他連結(登入、社群等)也不跳轉
+    document.querySelectorAll('.icon-link, .btn-outline').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  </script>
+</body>
+</html>
